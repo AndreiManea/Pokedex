@@ -6,7 +6,7 @@ This Pokedex App allows users to interact with a database of Pokémon to search 
 
 Instructions on how to run the app:
 
-1. clone the repository ( url )
+1. clone the repository ( [url](https://github.com/AndreiManea/Pokedex.git) )
 2. run "npm install" to install all dependecies required.
 3. run "npm run dev" to be able to start the app locally.
 
