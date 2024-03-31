@@ -1,31 +1,33 @@
-# Nuant FE Test
+# Pokedex App
 
-This project uses vite react-ts template which provides a minimal setup to get React working in Vite with ESLint rules.
+This Pokedex App allows users to interact with a database of Pokémon to search by name, filter by type, or both, and view detailed information about each Pokémon.
 
-It's been configured with Tailwindcss in case you want to use it Pokenode to retrieve the data of Pokemons
+## Instructions on How to Run the App`
 
-- [Pokenode](https://pokenode-ts.vercel.app/) (hint for the pokenode usage https://pokenode-ts.vercel.app/clients/pokemon-client) 
-- [Tailwind](https://tailwindcss.com/)
+Instructions on how to run the app:
 
-The purpose of the test is to implement an app that have the ability of :
+1. clone the repository ( url )
+2. run "npm install" to install all dependecies required.
+3. run "npm run dev" to be able to start the app locally.
 
-- Search for Pokemon by `name` and the posibility to filter the results by `type`
-  (User can search by name, user can filter pokemons by type, user can do both at the same time also)
-- Display the search results with enough detail to be able to identify to which Pokemon each result belongs.(Name and a image would do)
-- View more information about the Pokemon on a dedicated page by clicking a search result. (You can display Name, different sprites, weight, height and basic information, dealing with linked entities will be bonus point but arent really mandatory).
-- See the previous search results when navigating back to the search page from the pokemon details page.
+## Features
 
-So basically something like:
-![Screenshot](screenshot.png)
+- Search by name
+- Filter results by type
+- Search by name and type
+- Pokemon details page containing different information
+- Persisted pokemon details page
 
-Feel free to take any liberties with the design, and to use any library or tool you feel will help you accomplish the task.
+## Q&A
 
+### What part of building the project was the most difficult? Why?
 
+The most difficult part for me seemed to be the correct data managing when searching because there had to be multiple individual calls to be done for all matching possibilities based on the user input, which was challenging to optimize for performance and user experience.
 
+### If you had to filter the list of Pokémon by its type without the implemented functionality, how would you have done it?
 
- ### Submitting
+I assume this refers not to the case if I didn't implement the type filtering functionality itself, but rather to a direct approach to filter by type, even initially when there is not input and it would have to do a search for all the pokemons.
 
-  To submit your finished project, share with us a link to a GitHub repository containing its code. Along with instructions on how to run the app, include answers to the following:
+I'd say in that case, best approach would be to have your own backend ( maybe with Next.js) that could do the heavy API calling for you and crunch the data better so you don't have massive awaiting time on the client side.
 
-- What part of building the project was the most difficult? Why?
-- If you had to filter the list of Pokemons by its  `type` how would you have implemented it?
+This backend could aggregate and filter the data, serving it to the frontend in a more efficient manner.
